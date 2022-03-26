@@ -5,8 +5,8 @@ import { SwinglerProvider } from "../context/SwinglerContext";
 function MyApp({ Component, pageProps }) {
   return (
     <MoralisProvider
-      serverUrl="https://buaai0nj4ttx.usemoralis.com:2053/server"
-      appId="0GJxnyxLAUzUpVBOtquzyPaZHLaAQxUFw8rmaLyr">
+      serverUrl="https://b5fv67npunnd.usemoralis.com:2053/server"
+      appId="sAmVo4RfLoEdPsLTNCeHCoyK1hMLmFNkgJ7zXuV2">
       <SwinglerProvider>
         <Component {...pageProps} />
       </SwinglerProvider>
