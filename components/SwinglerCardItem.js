@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { TinderContext } from "../context/TinderContext";
+import { SwinglerContext } from "../context/SwinglerContext";
 import { FaUndoAlt } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
@@ -7,7 +7,7 @@ import { BsFillLightningChargeFill } from "react-icons/bs";
 import TinderCard from "react-tinder-card";
 
 const style = {
-  tinderCardWrapper: `w-full h-full absolute`,
+  SwinglerCardWrapper: `w-full h-full absolute`,
   wrapper: `w-full h-full overflow-hidden bg-no-repeat bg-cover bg-center relative px-8 py-4`,
   space: `flex justify-between h-3/4 items-end mb-6`,
   name: `flex text-white text-3xl font-extrabold items-center -mb-4`,
@@ -22,8 +22,8 @@ const style = {
   lightningColors: `border-purple-500 text-purple-500`,
 };
 
-const TinderCardItem = ({ card }) => {
-  const { handleRightSwipe, currentAccount } = useContext(TinderContext);
+const SwinglerCardItem = ({ card }) => {
+  const { handleRightSwipe, currentAccount } = useContext(SwinglerContext);
 
   const onSwipe = (dir) => {
     if (dir === "right") {
@@ -33,7 +33,7 @@ const TinderCardItem = ({ card }) => {
 
   return (
     <TinderCard
-      className={style.tinderCardWrapper}
+      className={style.SwinglerCardWrapper}
       preventSwipe={["up", "down"]}
       onSwipe={onSwipe}>
       <div
@@ -76,4 +76,4 @@ const TinderCardItem = ({ card }) => {
   );
 };
 
-export default TinderCardItem;
+export default SwinglerCardItem;

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import fire from "../assets/fire.png";
 import { useContext } from "react";
-import { TinderContext } from "../context/TinderContext";
+import { SwinglerContext } from "../context/SwinglerContext";
 
 const style = {
   wrapper: `h-24 py-11 text-white flex w-screen items-center px-16 justify-between`,
   main: `flex items-center gap-4`,
-  swinglerText: `text-5xl font-semibold mr-8 cursor-pointer`,
+  SwinglerText: `text-5xl font-semibold mr-8 cursor-pointer`,
   leftMenu: `flex gap-8 text-lg`,
   menuItem: `cursor-pointer hover:text-red-400 duration-300 hover:scale-110`,
   rightMenu: `flex gap-3 items-center`,
@@ -17,7 +17,7 @@ const style = {
 
 const Header = () => {
   const { connectWallet, currentAccount, disconnectWallet } =
-    useContext(TinderContext);
+    useContext(SwinglerContext);
 
   return (
     <div
@@ -26,7 +26,7 @@ const Header = () => {
       }`}>
       <div className={style.main}>
         <Image src={fire} alt="fire" height={45} width={45} />
-        <h1 className={style.swinglerText}>Swingler</h1>
+        <h1 className={style.SwinglerText}>Swingler</h1>
 
         <div className={style.leftMenu}>
           <div className={style.menuItem}>Products</div>

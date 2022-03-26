@@ -1,10 +1,10 @@
 import React from "react";
-import profilePic from "../assets/profile-pic.avif";
+import profilePic from "../assets/profile-pic.jpeg";
 import logo from "../assets/logo.png";
 import { IoIosNotifications } from "react-icons/io";
 import Image from "next/image";
 import { useContext } from "react";
-import { TinderContext } from "../context/TinderContext";
+import { SwinglerContext } from "../context/SwinglerContext";
 
 const style = {
   wrapper: `flex items-center bg-white w-full h-20 p-8 justify-evenly`,
@@ -15,7 +15,7 @@ const style = {
 };
 
 const CardHeader = () => {
-  const { currentUser } = useContext(TinderContext);
+  const { currentUser } = useContext(SwinglerContext);
 
   return (
     <div className={style.wrapper}>
